@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Box Shadow Generator</title>
+    </head>
+    <body>
+        <div class="page-menu">
+            <a href="/index.html" class="menu-link">Box Shadow</a>
+            <a href="/pagetwo.html" class="menu-link">Text Shadow</a>
+            <a href="/pagetwo.html" class="menu-link">CSS Cursor</a>
+            <a href="/pagetwo.html" class="menu-link">Border</a>
+            <a href="/pagetwo.html" class="menu-link">Border Radius</a>
+            <a href="/pagetwo.html" class="menu-link">Gradient CSS</a>
+            <a href="/pagetwo.html" class="menu-link">Transform CSS</a>
+            <a href="/pagetwo.html" class="menu-link">RGBA and Hex Color</a>
+            <a href="/pagetwo.html" class="menu-link">Multiple Columns</a>
+            <a href="/pagetwo.html" class="menu-link">Filter</a>
+        </div>
+        <div class="main-content">
+            <h1>Box Shadow</h1>
+            <div class="result">
+                <div id="preview"></div>
+            </div>
+            <div class="settings">
+                <div class="range-wrapper">
+                    <label for="x-shadow">Horizonal Shadow : </label>
+                    <input type="range" id="x-shadow" min="-100" max="100" value="-6">
+                </div>
+                <div class="range-wrapper">
+                    <label for="y-shadow">Vertical Shadow : </label>
+                    <input type="range" id="y-shadow" min="-100" max="100" value="15">
+                </div>
+                <div class="range-wrapper">
+                    <label for="blur-r">Blue Radius : </label>
+                    <input type="range" id="blur-r" min="0" max="100" value="30">
+                </div>
+                <div class="range-wrapper">
+                    <label for="spread-r">Spread Radius : </label>
+                    <input type="range" id="spread-r" min="0" max="50" value="6">
+                </div>
+                <div class="range-wrapper">
+                    <label for="border-r">Border Radius : </label>
+                    <input type="range" id="border-r" min="0" max="100" step="1" value="70">
+                </div>
+                <div class="range-wrapper">
+                    <label for="shadow-opacity">Shadow Opacity : </label>
+                    <input type="range" id="shadow-opacity" min="0" max="1" step="0.1" value="0.5">
+                </div>
+                <div class="input-wrapper">
+                    <label for="inset-shadow">Inset Shadow : </label>
+                    <input type="checkbox" id="inset-shadow">
+                </div>
+                <div class="input-wrapper">
+                    <label for="shadow-color">Shadow Color : </label>
+                    <input type="color" id="shadow-color">
+                </div>
+            </div>
+            <div class="code-container">
+                <textarea id="styles" rows="2"></textarea>
+                <button id="copystyles" onclick={copyStyles()}>Copy Styles</button>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
