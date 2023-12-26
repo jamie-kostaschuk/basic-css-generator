@@ -87,7 +87,7 @@ label{
     font-weight: 800; 
     justify-content: center;
     align-items: center;
-    height: 8rem;
+    min-height: 8rem;
     border: 2px solid var(--background-grey);
     border-radius: 1rem;
 }
