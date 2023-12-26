@@ -1,4 +1,4 @@
-const preview = document.getElementById("box-shadow-preview"),
+const preview = document.getElementById("text-shadow-preview"),
 styles = document.getElementById("styles"),
 ranges = document.querySelectorAll(".settings input"),
 copyButton = document.getElementById("copystyles");
@@ -13,21 +13,17 @@ function generateStyles(){
     const xShadow = document.getElementById("x-shadow").value;
     const yShadow = document.getElementById("y-shadow").value;
     const blurRadius = document.getElementById("blur-r").value;
-    const spreadRadius = document.getElementById("spread-r").value;
-    const borderRadius = document.getElementById("border-r").value; 
     const shadowOpacity = document.getElementById("shadow-opacity").value;
-    const insetShadow = document.getElementById("inset-shadow").checked;
     const shadowColor = document.getElementById("shadow-color").value;
 
     // Create the box shadow CSS property Value
-    const boxShadow = `${insetShadow ? "inset" : ""} ${xShadow}px ${yShadow}px ${blurRadius}px ${spreadRadius}px ${hexToRgba(shadowColor, shadowOpacity)}`
+    const textShadow = `${xShadow}px ${yShadow}px ${blurRadius}px ${hexToRgba(shadowColor, shadowOpacity)}`
 
     // Upate the preview element styles 
-    preview.style.boxShadow = boxShadow;
-    preview.style.borderRadius = `${borderRadius}px`
+    preview.style.textShadow = textShadow;
 
     // Update textarea with generated styles
-    styles.textContent = `box-shadow: ${boxShadow}; \nborder-radius: ${borderRadius}px`
+    styles.textContent = `text-shadow: ${textShadow}; `
 }
 
 // Function to covert hex color and opacity to rgba format

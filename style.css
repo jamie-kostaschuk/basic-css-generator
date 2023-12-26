@@ -60,20 +60,18 @@ label{
 .main-content{
     background-color: var(--white);
     padding: 2rem;
-    margin-right: 2rem;    
     border-radius: 1.5rem;
     height: min-content;
     box-shadow: 0 20px 40px rgba(2, 42, 83, 0.2);
     width: 100%;
-    margin-left: 18rem;
-    margin-bottom: 2rem;
+    margin: 2rem 2rem 2rem 18rem;
 }
 
 .result{ 
-    padding: 20px 0 120px;
+    padding: 20px 0 64px;
 }
 
-#preview{
+#box-shadow-preview{
     background-color: var(--primary-color);
     width: 200px;
     height: 200px;
@@ -81,6 +79,25 @@ label{
     margin: auto;
     border-radius: 4rem;
     box-shadow: -6px 15px 30px 6px rgba(0, 0, 0, 0.5);
+}
+
+.text-preview{
+    display: flex;
+    font-size: 3rem;
+    font-weight: 800; 
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+    border: 2px solid var(--background-grey);
+    border-radius: 1rem;
+}
+
+#text-shadow-preview{
+    text-shadow: -6px 15px 4px rgba(0, 0, 0, 0.5);
+}
+
+#cursor-css-preview{
+    cursor: alias;
 }
 
 .settings{
@@ -96,11 +113,34 @@ label{
 }
 
 
-.range-wrapper, #color-wrapper{
+.range-wrapper, #color-wrapper, .select-wrapper{
     display: flex;
     flex-direction: column;
 }
 
+.select-items-wrapper{
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+}
+
+.radio-select{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    cursor: pointer;
+    line-height: 1.5rem;
+    padding: 8px 16px 8px 16px;
+    border-radius: 0.5rem;
+    align-items: center;
+}
+
+.radio-select:hover{
+    background-color: var(--background-light-grey);
+}
+
+.radio-select label, input{
+    cursor: pointer;
+}
 
 input[type="range"]{
     cursor: pointer;
@@ -179,5 +219,6 @@ button{
     }
     body{
         flex-direction: column;
+        justify-content:start
     }
 }
