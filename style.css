@@ -106,6 +106,10 @@ label{
     gap: 1rem 1.5rem;
 }
 
+#one-input-settings{
+    grid-template-columns: 1fr;
+}
+
 @media (max-width: 720px) {
     .settings{
         grid-template-columns: 1fr;
@@ -120,7 +124,7 @@ label{
 
 .select-items-wrapper{
     display: grid;
-    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-columns: 4fr 4fr 4fr;
 }
 
 .radio-select{
