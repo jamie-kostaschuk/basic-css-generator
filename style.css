@@ -221,8 +221,7 @@ button{
         flex-direction: column;
         justify-content:start
     }
-    .select-items-wrapper{{
+    .select-items-wrapper{
         grid-template-columns: 3fr 3fr;
-
     }
 }
